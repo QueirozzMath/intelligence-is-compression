@@ -10,5 +10,6 @@ requests>=2.31
 pytest>=8.0
 tabulate>=0.9
 manimgl>=1.7
+imageio-ffmpeg>=0.8  # binário ffmpeg isolado usado quando não há instalação do sistema
 audioop-lts; python_version >= "3.13"  # compatibilidade do pydub/ManimGL
 

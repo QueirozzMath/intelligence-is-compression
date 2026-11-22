@@ -10,4 +10,5 @@ results/animations/*
 !results/animations/.gitkeep
 media/
 .cache/
+node_modules/
 

@@ -1,0 +1,11 @@
+{
+  "name": "intelligence-is-compression-deliverables",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build_deliverables.js"
+  },
+  "devDependencies": {
+    "pdfkit": "^0.21.0",
+    "pptxgenjs": "^4.0.1"
+  }
+}
