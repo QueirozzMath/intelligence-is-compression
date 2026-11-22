@@ -87,6 +87,13 @@ As cenas leem exclusivamente `results/tables/`; rode o pipeline antes. Em Window
 
 ## Apresentação e relatório
 
+### Downloads rápidos
+
+- **[Baixar a apresentação editável em PPTX](deliverables/intelligence_is_compression_20min.pptx)**
+- **[Baixar a aula completa em PDF](deliverables/relatorio_intelligence_is_compression.pdf)**
+- **[Acessar todas as figuras, gráficos, dados e simulações](docs/visual_gallery.md)**
+- [Ler a aula completa em Markdown](docs/aula_completa.md)
+
 Os entregáveis são gerados diretamente dos CSVs versionados, preservando a rastreabilidade dos números:
 
 ```bash
@@ -94,7 +101,7 @@ npm install
 make deliverables
 ```
 
-Os arquivos finais aparecem em `deliverables/`. O PPTX usa formas vetoriais, textos editáveis e notas do apresentador; pode ser aberto no PowerPoint, Google Slides ou importado no Canva. O PDF foi diagramado para ocupar exatamente quatro páginas A4.
+Os arquivos finais aparecem em `deliverables/`. O PPTX usa formas vetoriais, textos editáveis e notas do apresentador; pode ser aberto no PowerPoint, Google Slides ou importado no Canva. O relatório é uma aula extensa e autônoma para preparação do grupo.
 
 Neste ambiente, as 13 classes foram importadas com sucesso no ManimGL 1.7.2. A API do arXiv bloqueou o IP, mas o fallback público do Hugging Face produziu um corpus rápido real e balanceado; os resultados versionados vêm desse corpus. Os MP4 não foram renderizados porque ffmpeg não estava instalado. Nenhum vídeo ou resultado foi simulado.
 
