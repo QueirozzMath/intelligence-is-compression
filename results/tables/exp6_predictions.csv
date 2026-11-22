@@ -1,0 +1,305 @@
+id,true_area,predicted_area,method,correct
+709.0572,astro-ph,cond-mat,NCD k=1,False
+1502.04037,astro-ph,cond-mat,NCD k=1,False
+1902.03464,astro-ph,astro-ph,NCD k=1,True
+1610.02405,astro-ph,astro-ph,NCD k=1,True
+1502.03952,astro-ph,hep-th,NCD k=1,False
+2008.02639,astro-ph,q-bio,NCD k=1,False
+1902.03481,astro-ph,q-bio,NCD k=1,False
+709.0538,cond-mat,stat,NCD k=1,False
+2305.15711,cond-mat,astro-ph,NCD k=1,False
+709.0577,cond-mat,stat,NCD k=1,False
+1902.0349,cond-mat,cond-mat,NCD k=1,True
+709.0594,cond-mat,cond-mat,NCD k=1,True
+1910.07695,cond-mat,astro-ph,NCD k=1,False
+2106.03296,cond-mat,cond-mat,NCD k=1,True
+1910.07725,cond-mat,quant-ph,NCD k=1,False
+2007.03052,cs,cs,NCD k=1,True
+1902.0343,cs,q-bio,NCD k=1,False
+1502.04022,cs,math,NCD k=1,False
+2008.02653,cs,q-bio,NCD k=1,False
+2008.02667,cs,cs,NCD k=1,True
+1902.03506,cs,econ,NCD k=1,False
+2007.03047,cs,cs,NCD k=1,True
+2109.05421,econ,quant-ph,NCD k=1,False
+2002.09201,econ,stat,NCD k=1,False
+2206.07537,econ,q-bio,NCD k=1,False
+2107.02637,econ,stat,NCD k=1,False
+2304.01141,econ,stat,NCD k=1,False
+2106.15479,econ,econ,NCD k=1,True
+1910.07707,econ,quant-ph,NCD k=1,False
+2305.13121,econ,math,NCD k=1,False
+1405.5538,hep-th,cond-mat,NCD k=1,False
+802.2809,hep-th,q-bio,NCD k=1,False
+2008.0263,hep-th,math,NCD k=1,False
+802.3454,hep-th,hep-th,NCD k=1,True
+1706.03781,hep-th,quant-ph,NCD k=1,False
+1706.03797,hep-th,hep-th,NCD k=1,True
+901.4962,hep-th,q-bio,NCD k=1,False
+1003.0769,hep-th,math,NCD k=1,False
+2007.03043,math,math,NCD k=1,True
+1902.03479,math,econ,NCD k=1,False
+1902.03437,math,math,NCD k=1,True
+1902.0346,math,stat,NCD k=1,False
+1902.03483,math,cond-mat,NCD k=1,False
+1502.04002,math,math,NCD k=1,True
+1502.04027,math,math,NCD k=1,True
+1502.03991,math,quant-ph,NCD k=1,False
+2106.03293,physics,cond-mat,NCD k=1,False
+1902.03443,physics,quant-ph,NCD k=1,False
+1910.07758,physics,stat,NCD k=1,False
+2106.03312,physics,q-bio,NCD k=1,False
+1502.03975,physics,physics,NCD k=1,True
+2106.03321,physics,cs,NCD k=1,False
+1902.03433,physics,stat,NCD k=1,False
+2007.02997,physics,physics,NCD k=1,True
+2305.13127,q-bio,cs,NCD k=1,False
+2106.00172,q-bio,econ,NCD k=1,False
+1807.00977,q-bio,q-bio,NCD k=1,True
+2009.08802,q-bio,econ,NCD k=1,False
+2008.11408,q-bio,cs,NCD k=1,False
+2305.00386,q-bio,cs,NCD k=1,False
+1003.072,quant-ph,cond-mat,NCD k=1,False
+1506.051,quant-ph,quant-ph,NCD k=1,True
+2008.02623,quant-ph,econ,NCD k=1,False
+1706.03786,quant-ph,quant-ph,NCD k=1,True
+2106.03238,quant-ph,stat,NCD k=1,False
+1706.03804,quant-ph,cond-mat,NCD k=1,False
+709.0563,quant-ph,econ,NCD k=1,False
+1003.0756,quant-ph,cond-mat,NCD k=1,False
+709.276,stat,cs,NCD k=1,False
+2305.15671,stat,econ,NCD k=1,False
+2007.03031,stat,econ,NCD k=1,False
+1311.3799,stat,cond-mat,NCD k=1,False
+1706.03805,stat,cond-mat,NCD k=1,False
+2007.05117,stat,stat,NCD k=1,True
+2212.14883,stat,cs,NCD k=1,False
+1706.03779,stat,econ,NCD k=1,False
+709.0572,astro-ph,cond-mat,NCD k=5,False
+1502.04037,astro-ph,stat,NCD k=5,False
+1902.03464,astro-ph,astro-ph,NCD k=5,True
+1610.02405,astro-ph,astro-ph,NCD k=5,True
+1502.03952,astro-ph,math,NCD k=5,False
+2008.02639,astro-ph,q-bio,NCD k=5,False
+1902.03481,astro-ph,astro-ph,NCD k=5,True
+709.0538,cond-mat,stat,NCD k=5,False
+2305.15711,cond-mat,astro-ph,NCD k=5,False
+709.0577,cond-mat,math,NCD k=5,False
+1902.0349,cond-mat,cond-mat,NCD k=5,True
+709.0594,cond-mat,cond-mat,NCD k=5,True
+1910.07695,cond-mat,astro-ph,NCD k=5,False
+2106.03296,cond-mat,cond-mat,NCD k=5,True
+1910.07725,cond-mat,quant-ph,NCD k=5,False
+2007.03052,cs,cs,NCD k=5,True
+1902.0343,cs,q-bio,NCD k=5,False
+1502.04022,cs,cs,NCD k=5,True
+2008.02653,cs,q-bio,NCD k=5,False
+2008.02667,cs,cs,NCD k=5,True
+1902.03506,cs,stat,NCD k=5,False
+2007.03047,cs,cs,NCD k=5,True
+2109.05421,econ,quant-ph,NCD k=5,False
+2002.09201,econ,stat,NCD k=5,False
+2206.07537,econ,q-bio,NCD k=5,False
+2107.02637,econ,quant-ph,NCD k=5,False
+2304.01141,econ,stat,NCD k=5,False
+2106.15479,econ,econ,NCD k=5,True
+1910.07707,econ,econ,NCD k=5,True
+2305.13121,econ,math,NCD k=5,False
+1405.5538,hep-th,hep-th,NCD k=5,True
+802.2809,hep-th,physics,NCD k=5,False
+2008.0263,hep-th,math,NCD k=5,False
+802.3454,hep-th,hep-th,NCD k=5,True
+1706.03781,hep-th,math,NCD k=5,False
+1706.03797,hep-th,hep-th,NCD k=5,True
+901.4962,hep-th,hep-th,NCD k=5,True
+1003.0769,hep-th,math,NCD k=5,False
+2007.03043,math,math,NCD k=5,True
+1902.03479,math,econ,NCD k=5,False
+1902.03437,math,hep-th,NCD k=5,False
+1902.0346,math,stat,NCD k=5,False
+1902.03483,math,math,NCD k=5,True
+1502.04002,math,math,NCD k=5,True
+1502.04027,math,math,NCD k=5,True
+1502.03991,math,quant-ph,NCD k=5,False
+2106.03293,physics,cond-mat,NCD k=5,False
+1902.03443,physics,quant-ph,NCD k=5,False
+1910.07758,physics,econ,NCD k=5,False
+2106.03312,physics,q-bio,NCD k=5,False
+1502.03975,physics,physics,NCD k=5,True
+2106.03321,physics,stat,NCD k=5,False
+1902.03433,physics,stat,NCD k=5,False
+2007.02997,physics,physics,NCD k=5,True
+2305.13127,q-bio,cs,NCD k=5,False
+2106.00172,q-bio,econ,NCD k=5,False
+1807.00977,q-bio,q-bio,NCD k=5,True
+2009.08802,q-bio,econ,NCD k=5,False
+2008.11408,q-bio,cs,NCD k=5,False
+2305.00386,q-bio,cs,NCD k=5,False
+1003.072,quant-ph,math,NCD k=5,False
+1506.051,quant-ph,quant-ph,NCD k=5,True
+2008.02623,quant-ph,econ,NCD k=5,False
+1706.03786,quant-ph,quant-ph,NCD k=5,True
+2106.03238,quant-ph,quant-ph,NCD k=5,True
+1706.03804,quant-ph,cond-mat,NCD k=5,False
+709.0563,quant-ph,econ,NCD k=5,False
+1003.0756,quant-ph,cond-mat,NCD k=5,False
+709.276,stat,cs,NCD k=5,False
+2305.15671,stat,stat,NCD k=5,True
+2007.03031,stat,econ,NCD k=5,False
+1311.3799,stat,cond-mat,NCD k=5,False
+1706.03805,stat,quant-ph,NCD k=5,False
+2007.05117,stat,stat,NCD k=5,True
+2212.14883,stat,stat,NCD k=5,True
+1706.03779,stat,econ,NCD k=5,False
+709.0572,astro-ph,physics,n-grama,False
+1502.04037,astro-ph,astro-ph,n-grama,True
+1902.03464,astro-ph,astro-ph,n-grama,True
+1610.02405,astro-ph,astro-ph,n-grama,True
+1502.03952,astro-ph,astro-ph,n-grama,True
+2008.02639,astro-ph,astro-ph,n-grama,True
+1902.03481,astro-ph,astro-ph,n-grama,True
+709.0538,cond-mat,stat,n-grama,False
+2305.15711,cond-mat,physics,n-grama,False
+709.0577,cond-mat,cond-mat,n-grama,True
+1902.0349,cond-mat,cond-mat,n-grama,True
+709.0594,cond-mat,cond-mat,n-grama,True
+1910.07695,cond-mat,cond-mat,n-grama,True
+2106.03296,cond-mat,cond-mat,n-grama,True
+1910.07725,cond-mat,hep-th,n-grama,False
+2007.03052,cs,cs,n-grama,True
+1902.0343,cs,cs,n-grama,True
+1502.04022,cs,cs,n-grama,True
+2008.02653,cs,q-bio,n-grama,False
+2008.02667,cs,cs,n-grama,True
+1902.03506,cs,econ,n-grama,False
+2007.03047,cs,stat,n-grama,False
+2109.05421,econ,econ,n-grama,True
+2002.09201,econ,stat,n-grama,False
+2206.07537,econ,econ,n-grama,True
+2107.02637,econ,econ,n-grama,True
+2304.01141,econ,econ,n-grama,True
+2106.15479,econ,econ,n-grama,True
+1910.07707,econ,econ,n-grama,True
+2305.13121,econ,cs,n-grama,False
+1405.5538,hep-th,hep-th,n-grama,True
+802.2809,hep-th,hep-th,n-grama,True
+2008.0263,hep-th,quant-ph,n-grama,False
+802.3454,hep-th,hep-th,n-grama,True
+1706.03781,hep-th,hep-th,n-grama,True
+1706.03797,hep-th,hep-th,n-grama,True
+901.4962,hep-th,hep-th,n-grama,True
+1003.0769,hep-th,hep-th,n-grama,True
+2007.03043,math,math,n-grama,True
+1902.03479,math,q-bio,n-grama,False
+1902.03437,math,math,n-grama,True
+1902.0346,math,stat,n-grama,False
+1902.03483,math,math,n-grama,True
+1502.04002,math,math,n-grama,True
+1502.04027,math,math,n-grama,True
+1502.03991,math,math,n-grama,True
+2106.03293,physics,cond-mat,n-grama,False
+1902.03443,physics,physics,n-grama,True
+1910.07758,physics,cond-mat,n-grama,False
+2106.03312,physics,cond-mat,n-grama,False
+1502.03975,physics,physics,n-grama,True
+2106.03321,physics,stat,n-grama,False
+1902.03433,physics,physics,n-grama,True
+2007.02997,physics,physics,n-grama,True
+2305.13127,q-bio,stat,n-grama,False
+2106.00172,q-bio,q-bio,n-grama,True
+1807.00977,q-bio,physics,n-grama,False
+2009.08802,q-bio,q-bio,n-grama,True
+2008.11408,q-bio,q-bio,n-grama,True
+2305.00386,q-bio,q-bio,n-grama,True
+1003.072,quant-ph,cond-mat,n-grama,False
+1506.051,quant-ph,quant-ph,n-grama,True
+2008.02623,quant-ph,quant-ph,n-grama,True
+1706.03786,quant-ph,quant-ph,n-grama,True
+2106.03238,quant-ph,stat,n-grama,False
+1706.03804,quant-ph,cond-mat,n-grama,False
+709.0563,quant-ph,quant-ph,n-grama,True
+1003.0756,quant-ph,quant-ph,n-grama,True
+709.276,stat,econ,n-grama,False
+2305.15671,stat,stat,n-grama,True
+2007.03031,stat,cs,n-grama,False
+1311.3799,stat,econ,n-grama,False
+1706.03805,stat,stat,n-grama,True
+2007.05117,stat,stat,n-grama,True
+2212.14883,stat,econ,n-grama,False
+1706.03779,stat,stat,n-grama,True
+709.0572,astro-ph,cond-mat,TF-IDF,False
+1502.04037,astro-ph,astro-ph,TF-IDF,True
+1902.03464,astro-ph,astro-ph,TF-IDF,True
+1610.02405,astro-ph,astro-ph,TF-IDF,True
+1502.03952,astro-ph,astro-ph,TF-IDF,True
+2008.02639,astro-ph,astro-ph,TF-IDF,True
+1902.03481,astro-ph,astro-ph,TF-IDF,True
+709.0538,cond-mat,stat,TF-IDF,False
+2305.15711,cond-mat,cond-mat,TF-IDF,True
+709.0577,cond-mat,cond-mat,TF-IDF,True
+1902.0349,cond-mat,cond-mat,TF-IDF,True
+709.0594,cond-mat,cond-mat,TF-IDF,True
+1910.07695,cond-mat,cond-mat,TF-IDF,True
+2106.03296,cond-mat,cond-mat,TF-IDF,True
+1910.07725,cond-mat,math,TF-IDF,False
+2007.03052,cs,cs,TF-IDF,True
+1902.0343,cs,cs,TF-IDF,True
+1502.04022,cs,cs,TF-IDF,True
+2008.02653,cs,q-bio,TF-IDF,False
+2008.02667,cs,cs,TF-IDF,True
+1902.03506,cs,econ,TF-IDF,False
+2007.03047,cs,cs,TF-IDF,True
+2109.05421,econ,econ,TF-IDF,True
+2002.09201,econ,cs,TF-IDF,False
+2206.07537,econ,q-bio,TF-IDF,False
+2107.02637,econ,q-bio,TF-IDF,False
+2304.01141,econ,econ,TF-IDF,True
+2106.15479,econ,cs,TF-IDF,False
+1910.07707,econ,econ,TF-IDF,True
+2305.13121,econ,q-bio,TF-IDF,False
+1405.5538,hep-th,econ,TF-IDF,False
+802.2809,hep-th,hep-th,TF-IDF,True
+2008.0263,hep-th,quant-ph,TF-IDF,False
+802.3454,hep-th,hep-th,TF-IDF,True
+1706.03781,hep-th,hep-th,TF-IDF,True
+1706.03797,hep-th,hep-th,TF-IDF,True
+901.4962,hep-th,hep-th,TF-IDF,True
+1003.0769,hep-th,hep-th,TF-IDF,True
+2007.03043,math,math,TF-IDF,True
+1902.03479,math,math,TF-IDF,True
+1902.03437,math,math,TF-IDF,True
+1902.0346,math,stat,TF-IDF,False
+1902.03483,math,math,TF-IDF,True
+1502.04002,math,math,TF-IDF,True
+1502.04027,math,math,TF-IDF,True
+1502.03991,math,math,TF-IDF,True
+2106.03293,physics,cond-mat,TF-IDF,False
+1902.03443,physics,cond-mat,TF-IDF,False
+1910.07758,physics,quant-ph,TF-IDF,False
+2106.03312,physics,q-bio,TF-IDF,False
+1502.03975,physics,cond-mat,TF-IDF,False
+2106.03321,physics,stat,TF-IDF,False
+1902.03433,physics,quant-ph,TF-IDF,False
+2007.02997,physics,physics,TF-IDF,True
+2305.13127,q-bio,cs,TF-IDF,False
+2106.00172,q-bio,q-bio,TF-IDF,True
+1807.00977,q-bio,physics,TF-IDF,False
+2009.08802,q-bio,stat,TF-IDF,False
+2008.11408,q-bio,physics,TF-IDF,False
+2305.00386,q-bio,stat,TF-IDF,False
+1003.072,quant-ph,quant-ph,TF-IDF,True
+1506.051,quant-ph,quant-ph,TF-IDF,True
+2008.02623,quant-ph,quant-ph,TF-IDF,True
+1706.03786,quant-ph,quant-ph,TF-IDF,True
+2106.03238,quant-ph,stat,TF-IDF,False
+1706.03804,quant-ph,physics,TF-IDF,False
+709.0563,quant-ph,math,TF-IDF,False
+1003.0756,quant-ph,quant-ph,TF-IDF,True
+709.276,stat,cs,TF-IDF,False
+2305.15671,stat,stat,TF-IDF,True
+2007.03031,stat,stat,TF-IDF,True
+1311.3799,stat,q-bio,TF-IDF,False
+1706.03805,stat,stat,TF-IDF,True
+2007.05117,stat,stat,TF-IDF,True
+2212.14883,stat,stat,TF-IDF,True
+1706.03779,stat,stat,TF-IDF,True

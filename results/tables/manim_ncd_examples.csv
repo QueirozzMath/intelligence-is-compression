@@ -1,0 +1,3 @@
+pair_type,area_a,area_b,bytes_a,bytes_b,compressed_a,compressed_b,compressed_ab,ncd
+próximo,cond-mat,physics,30000,30000,10344,10672,19516.0,0.8594452773613194
+distante,math,astro-ph,30000,30000,10368,10876,20132.0,0.8977565281353439

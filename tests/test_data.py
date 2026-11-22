@@ -1,4 +1,6 @@
 import json
+import tempfile
+from pathlib import Path
 
 from src.data import clean_abstract, prepare_data
 
@@ -10,9 +12,11 @@ def test_limpeza_remove_latex_url_e_numeros():
     assert "alpha" not in cleaned
 
 
-def test_particoes_nao_vazam(monkeypatch, tmp_path):
+def test_particoes_nao_vazam(monkeypatch):
     import src.data as data_module
 
+    Path(".cache").mkdir(exist_ok=True)
+    tmp_path = Path(tempfile.mkdtemp(prefix="test-data-", dir=".cache"))
     (tmp_path / "data/raw").mkdir(parents=True)
     (tmp_path / "data/processed").mkdir(parents=True)
     (tmp_path / "results/tables").mkdir(parents=True)

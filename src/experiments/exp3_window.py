@@ -7,19 +7,32 @@ import pandas as pd
 
 from src.compress import ncd
 from src.config import ROOT
-from src.data import load_corpora
+from src.data import load_abstracts
 from src.plots import save_figure, setup_style
 
 
 def run(config: dict) -> None:
-    corpora = load_corpora().query("split == 'train'").set_index("area")
+    abstracts = load_abstracts().query("split == 'train'")
+    by_area = {area: group.text.to_numpy() for area, group in abstracts.groupby("area")}
+    rng = np.random.default_rng(config["seed"])
     rows = []
     for size in config["exp3_sizes"]:
-        halves = {area: (text[:size], text[size:size * 2]) for area, text in corpora.text.items()}
+        samples = {}
+        for area in config["areas"]:
+            pair = []
+            for _ in range(2):
+                chunks: list[str] = []
+                length = 0
+                while length < size:
+                    chunk = str(rng.choice(by_area[area]))
+                    chunks.append(chunk)
+                    length += len(chunk) + 1
+                pair.append("\n".join(chunks)[:size])
+            samples[area] = tuple(pair)
         for compressor in config["compressors"]:
-            within = [ncd(first, second, compressor) for first, second in halves.values() if second]
-            between = [ncd(halves[a][0], halves[b][0], compressor) for i, a in enumerate(config["areas"]) for b in config["areas"][i + 1:]]
-            rows.append({"bytes": size, "compressor": compressor, "within": np.mean(within), "between": np.mean(between), "separation": np.mean(between) - np.mean(within)})
+            within = [ncd(first, second, compressor) for first, second in samples.values()]
+            between = [ncd(samples[a][0], samples[b][0], compressor) for i, a in enumerate(config["areas"]) for b in config["areas"][i + 1:]]
+            rows.append({"bytes": size, "compressor": compressor, "within": np.mean(within), "between": np.mean(between), "separation": np.mean(between) - np.mean(within), "gzip_window_bytes": 32768})
     frame = pd.DataFrame(rows)
     frame.to_csv(ROOT / "results/tables/exp3_window.csv", index=False)
     setup_style()

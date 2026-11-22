@@ -9,5 +9,5 @@
 - **MDS/PCA:** implementados com autodecomposição/SVD do NumPy, sem scikit-learn.
 - **Manim:** cenas usam `Text` por padrão para não exigir LaTeX. Fórmulas são strings Unicode; isso mantém a importação portátil.
 - **GitHub:** o usuário criou `QueirozzMath/intelligence-is-compression`; o diretório isolado foi inicializado como repositório independente e conectado a esse remoto.
-- **Execução de dados em 22/11/2026:** a API oficial respondeu HTTP 429 mesmo com espera e backoff. Nenhum resultado científico foi criado a partir de dados simulados; permanece documentado o caminho do dump Kaggle.
+- **Execução de dados em 22/11/2026:** a API oficial respondeu HTTP 429/timeout. O fallback `UniverseTBD/arxiv-abstracts-large` do Hugging Face produziu o corpus rápido real; páginas recentes foram priorizadas porque a categoria `econ` só existe desde 2017. Nenhum resultado científico foi criado a partir de dados simulados.
 

@@ -29,7 +29,7 @@ class C2ArticlesCloud3D(ThreeDScene):
     def construct(self):
         data = table("pca3d_articles.csv")
         points = normalized_points(data, ("x", "y", "z"), 3.4)
-        heading = title("1.500 resumos formam regiões — sem embeddings")
+        heading = title(f"{len(data):,} resumos formam regiões — sem embeddings")
         heading.fix_in_frame()
         self.set_camera_orientation(phi=70 * DEGREES, theta=-55 * DEGREES)
         self.add_fixed_in_frame_mobjects(heading)

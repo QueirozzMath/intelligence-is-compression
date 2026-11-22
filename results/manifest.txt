@@ -1,0 +1,12 @@
+OK results/tables/corpus_stats.csv
+OK results/tables/exp1_compressibility.csv
+OK results/tables/exp2_ncd_lzma.csv
+OK results/tables/exp3_window.csv
+OK results/tables/exp4_cross_entropy.csv
+OK results/tables/exp5_word_contributions.csv
+OK results/tables/exp6_metrics.csv
+OK results/tables/exp7_interdisciplinary.csv
+OK results/tables/exp8_cluster_support.csv
+OK results/tables/mds3d_areas.csv
+OK results/tables/pca3d_articles.csv
+OK results/summary.md

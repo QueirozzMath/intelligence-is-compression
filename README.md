@@ -74,7 +74,7 @@ make animations-final
 
 As cenas leem exclusivamente `results/tables/`; rode o pipeline antes. Em Windows sem Bash, execute os comandos individuais listados em [`docs/animations_notes.md`](docs/animations_notes.md).
 
-Neste ambiente, as 13 classes foram importadas com sucesso no ManimGL 1.7.2. Os MP4 não foram renderizados porque ffmpeg não estava instalado e a API do arXiv bloqueou a obtenção do corpus com HTTP 429; nenhum vídeo ou resultado foi simulado.
+Neste ambiente, as 13 classes foram importadas com sucesso no ManimGL 1.7.2. A API do arXiv bloqueou o IP, mas o fallback público do Hugging Face produziu um corpus rápido real e balanceado; os resultados versionados vêm desse corpus. Os MP4 não foram renderizados porque ffmpeg não estava instalado. Nenhum vídeo ou resultado foi simulado.
 
 ## Interpretação e limitações
 

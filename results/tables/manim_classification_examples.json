@@ -1,0 +1,40 @@
+[
+  {
+    "kind": "acerto",
+    "id": 1502.04037,
+    "text": "optical observation through sub-meter telescope equipped with ccd camera becomes alternative method for increasing orbital debris detection and surveillance. this observational mode is expected to eye medium-sized objects in higher orbits (e.g. meo, gto, gso \\& geo), beyond the reach of usual radar system. however, such observation of fast-moving objects demands special treatment and analysis technique. in this study, we performed photometric analysis of the satellite track images photographed using rehabilitated schmidt bima sakti telescope in bosscha observatory. the hough transformation was implemented to automatically detect linear streak from the images. from this analysis and comparison to usspacecom catalog, two satellites were identified and associated with inactive thuraya- satell",
+    "true_area": "astro-ph",
+    "predicted_area": "astro-ph",
+    "bpc": {
+      "math": 3.4314305084040204,
+      "astro-ph": 3.028360118135042,
+      "cond-mat": 3.3456146947971632,
+      "hep-th": 3.5168160893457237,
+      "cs": 3.407295356865535,
+      "q-bio": 3.220167498291833,
+      "stat": 3.305723168064118,
+      "econ": 3.23084404716765,
+      "physics": 3.276628507871945,
+      "quant-ph": 3.3582962413968453
+    }
+  },
+  {
+    "kind": "erro",
+    "id": 709.0572,
+    "text": "we study an acceleration of electrons and positrons in the relativistic magnetic field reconnection using a -d particle-in-cell electromagnetic relativistic code. we consider the model with two current sheets and periodic boundary conditions. the electrons and positrons are very effectively accelerated during the tearing and coalescence processes of the reconnection. we found that near the x-points of the reconnection the positions of electrons and positrons differ. this separation process is in agreement with those studied in the previous papers analytically or by test particle simulations. we expect that in dependence on the magnetic field connectivity this local separation can lead to global spatial separation of the accelerated electrons and positrons. a similar simulation in the elect",
+    "true_area": "astro-ph",
+    "predicted_area": "physics",
+    "bpc": {
+      "math": 2.558335507940522,
+      "astro-ph": 2.286385666342764,
+      "cond-mat": 2.3440801812024996,
+      "hep-th": 2.418343365465132,
+      "cs": 2.9035069665394198,
+      "q-bio": 2.728783169083463,
+      "stat": 2.7880227404611393,
+      "econ": 3.197590384094509,
+      "physics": 2.2269831444329573,
+      "quant-ph": 2.5129878834769497
+    }
+  }
+]

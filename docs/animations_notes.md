@@ -1,6 +1,6 @@
 # Notas das animações ManimGL
 
-As 13 cenas são independentes, usam fundo escuro e leem valores de `results/tables/`. As 13 classes foram importadas com sucesso no ManimGL 1.7.2. Tempos abaixo são alvos de roteiro; confirme a duração exata dos MP4 após renderizar, pois o ambiente não possuía ffmpeg nem os CSVs reais (a API do arXiv respondeu HTTP 429).
+As 13 cenas são independentes, usam fundo escuro e leem valores de `results/tables/`. As 13 classes foram importadas com sucesso no ManimGL 1.7.2 e os CSVs rápidos reais foram exportados. Tempos abaixo são alvos de roteiro; confirme a duração exata dos MP4 após renderizar, pois o ambiente não possuía ffmpeg.
 
 | Cena | Arquivo | Duração alvo | Slide | Ideia e fala curta |
 |---|---|---:|---:|---|

@@ -19,7 +19,7 @@ def run(config: dict) -> None:
         for compressor in config["compressors"]:
             rows.append({"area": record.area, "kind": "compressor", "method": compressor, "value": bits_per_character(record.text, compressor), "ratio": compressed_size(record.text, compressor) / original})
         for order in (0, 1, 2):
-            rows.append({"area": record.area, "kind": "entropy", "method": f"H{order}", "value": empirical_entropy(record.text, order), "ratio": None})
+            rows.append({"area": record.area, "kind": "entropy", "method": f"H{order}", "value": empirical_entropy(record.text, order), "ratio": "not_applicable"})
     frame = pd.DataFrame(rows)
     frame.to_csv(ROOT / "results/tables/exp1_compressibility.csv", index=False)
     setup_style()

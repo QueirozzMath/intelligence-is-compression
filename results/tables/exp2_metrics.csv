@@ -1,0 +1,7 @@
+metric,compressor_a,compressor_b,value
+cophenetic,gzip,gzip,0.807422414171455
+cophenetic,bz2,bz2,0.7994076044350313
+cophenetic,lzma,lzma,0.8041326746240204
+spearman,gzip,bz2,0.944102243669059
+spearman,gzip,lzma,0.9678843181903437
+spearman,bz2,lzma,0.9671936758893279
