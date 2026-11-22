@@ -89,10 +89,16 @@ As cenas leem exclusivamente `results/tables/`; rode o pipeline antes. Em Window
 
 ### Downloads rápidos
 
+- **[Abrir a apresentação web interativa](https://queirozzmath.github.io/intelligence-is-compression/web/)**
+- **[Abrir diretamente o laboratório de simulações e animações](https://queirozzmath.github.io/intelligence-is-compression/web/simulations.html)**
+- **[Apresentação web interativa — prévia desta versão](https://raw.githack.com/QueirozzMath/intelligence-is-compression/feat/interactive-web-presentation/web/index.html)**
+- **[Laboratório de simulações — prévia desta versão](https://raw.githack.com/QueirozzMath/intelligence-is-compression/feat/interactive-web-presentation/web/simulations.html)**
 - **[Baixar a apresentação editável em PPTX](deliverables/intelligence_is_compression_20min.pptx)**
 - **[Baixar a aula completa em PDF](deliverables/relatorio_intelligence_is_compression.pdf)**
 - **[Acessar todas as figuras, gráficos, dados e simulações](docs/visual_gallery.md)**
 - [Ler a aula completa em Markdown](docs/aula_completa.md)
+
+Links diretos para experiências: [surpresa em bits](web/simulations.html#surprise), [construtor de códigos](web/simulations.html#codes), [cross-entropy](web/simulations.html#cross-entropy), [NCD entre textos](web/simulations.html#ncd), [janela do gzip](web/simulations.html#gzip-window), [mapa das áreas](web/simulations.html#areas), [classificação](web/simulations.html#classification) e [superfície 3D](web/simulations.html#surface).
 
 Os entregáveis são gerados diretamente dos CSVs versionados, preservando a rastreabilidade dos números:
 
@@ -102,6 +108,8 @@ make deliverables
 ```
 
 Os arquivos finais aparecem em `deliverables/`. O PPTX usa formas vetoriais, textos editáveis e notas do apresentador; pode ser aberto no PowerPoint, Google Slides ou importado no Canva. O relatório é uma aula extensa e autônoma para preparação do grupo.
+
+A versão web não depende de internet nem de bibliotecas externas. Para evitar restrições de alguns navegadores ao abrir arquivos locais, rode `make web` e acesse `http://localhost:8000/web/`.
 
 Neste ambiente, as 13 classes foram importadas com sucesso no ManimGL 1.7.2. A API do arXiv bloqueou o IP, mas o fallback público do Hugging Face produziu um corpus rápido real e balanceado; os resultados versionados vêm desse corpus. Os MP4 não foram renderizados porque ffmpeg não estava instalado. Nenhum vídeo ou resultado foi simulado.
 
