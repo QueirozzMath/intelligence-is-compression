@@ -11,9 +11,9 @@ const OUT = path.join(ROOT, 'deliverables');
 fs.mkdirSync(OUT, { recursive: true });
 
 const C = {
-  bg: '0B1020', panel: '151D32', grid: '28344F', white: 'F5F7FB',
-  muted: 'A9B4CC', blue: '58C4DD', yellow: 'F6C85F', red: 'FF6B6B',
-  green: '6EE7B7', purple: 'A78BFA', orange: 'F59E0B',
+  bg: '101820', panel: '16232C', grid: '31414A', white: 'F2EDE3',
+  muted: 'A9B0AE', blue: '67B7C7', yellow: 'E8C56A', red: 'D97564',
+  green: '72B69A', purple: 'A995C8', orange: 'D99559',
 };
 const AREA = { math:'58C4DD', 'astro-ph':'F6C85F', 'cond-mat':'6EE7B7',
   'hep-th':'D58BF0', cs:'71A7FF', 'q-bio':'FF8A65', stat:'FDE68A', econ:'C49A6C',
@@ -38,11 +38,12 @@ pptx.subject = 'Teoria da Informação: compressão, entropia cruzada e estrutur
 pptx.title = 'Intelligence is Compression';
 pptx.company = 'Trabalho de graduação';
 pptx.lang = 'pt-BR';
-pptx.theme = { headFontFace:'Arial', bodyFontFace:'Arial', lang:'pt-BR' };
+pptx.theme = { headFontFace:'Georgia', bodyFontFace:'Arial', lang:'pt-BR' };
 pptx.defineSlideMaster({
   title:'MASTER', background:{color:C.bg},
   objects:[
-    { line:{x:0.55,y:7.13,w:12.2,h:0,line:{color:C.grid,width:0.6}} },
+    { line:{x:0.55,y:7.13,w:12.2,h:0,line:{color:C.grid,width:0.45}} },
+    { line:{x:0.58,y:0.34,w:0.42,h:0,line:{color:C.yellow,width:2.4}} },
     { text:{text:'INTELLIGENCE IS COMPRESSION',options:{x:0.58,y:7.18,w:3.2,h:0.16,fontFace:'Arial',fontSize:6.5,color:C.muted,charSpacing:1.8,margin:0}}},
     { text:{text:'TEORIA DA INFORMAÇÃO',options:{x:10.2,y:7.18,w:2.5,h:0.16,fontFace:'Arial',fontSize:6.5,color:C.muted,charSpacing:1.8,align:'right',margin:0}}},
   ], slideNumber:{x:12.75,y:7.15,color:C.muted,fontSize:7}
@@ -52,11 +53,11 @@ const ST = pptx.ShapeType;
 function slide(title, kicker='') {
   const s=pptx.addSlide('MASTER');
   if(kicker) s.addText(kicker.toUpperCase(),{x:0.62,y:0.38,w:5.5,h:0.22,fontFace:'Arial',fontSize:8.5,bold:true,color:C.blue,charSpacing:2.2,margin:0});
-  if(title) s.addText(title,{x:0.58,y:0.68,w:12.1,h:0.62,fontFace:'Arial',fontSize:27,bold:true,color:C.white,margin:0,breakLine:false,fit:'shrink'});
+  if(title) s.addText(title,{x:0.58,y:0.68,w:12.1,h:0.62,fontFace:'Georgia',fontSize:25.5,bold:false,color:C.white,margin:0,breakLine:false,fit:'shrink'});
   return s;
 }
 function txt(s,text,x,y,w,h,size=18,color=C.white,opts={}) { s.addText(text,{x,y,w,h,fontFace:'Arial',fontSize:size,color,margin:0,breakLine:false,fit:'shrink',valign:'mid',...opts}); }
-function box(s,x,y,w,h,fill=C.panel,line=C.grid,r=0.12) { s.addShape(r?ST.roundRect:ST.rect,{x,y,w,h,rectRadius:r,fill:{color:fill},line:{color:line,width:0.8},radius:r}); }
+function box(s,x,y,w,h,fill=C.panel,line=C.grid,r=0.04) { s.addShape(r?ST.roundRect:ST.rect,{x,y,w,h,rectRadius:r,fill:{color:fill,transparency:14},line:{color:line,width:0.65},radius:r}); }
 function circle(s,x,y,d,fill,line=fill) { s.addShape(ST.ellipse,{x,y,w:d,h:d,fill:{color:fill},line:{color:line,width:1}}); }
 function line(s,x,y,w,h,color=C.grid,width=1,dash='solid') { s.addShape(ST.line,{x,y,w,h,line:{color,width,dashType:dash,beginArrowType:'none',endArrowType:'none'}}); }
 function note(s, text) { s.addNotes(`Tempo sugerido: ${text}`); }
@@ -68,12 +69,12 @@ function axis(s,x,y,w,h,xlabel='',ylabel='') { line(s,x,y+h,w,0,C.muted,1.2); li
 {
  const s=pptx.addSlide(); s.background={color:C.bg};
  for(let i=0;i<70;i++){const x=(i*2.91)%13.1,y=(i*1.73)%7.3,d=0.018+(i%4)*0.008; circle(s,x,y,d,i%7===0?C.yellow:C.grid);}
- txt(s,'INTELLIGENCE',0.7,1.14,11.9,0.85,48,C.white,{bold:true,charSpacing:2});
- txt(s,'IS COMPRESSION',0.7,2.0,11.9,0.85,48,C.blue,{bold:true,charSpacing:2});
+ txt(s,'Intelligence',0.7,1.08,11.9,0.9,46,C.white,{fontFace:'Georgia',italic:true,charSpacing:0.4});
+ txt(s,'is compression',0.7,1.98,11.9,0.9,46,C.blue,{fontFace:'Georgia',charSpacing:0.4});
  txt(s,'Podemos medir proximidade entre ideias\ncontando quantos bits elas compartilham?',0.75,3.28,8.2,1.1,23,C.muted);
  const bits='01101001 01100100 01100101 01101001 01100001';
  txt(s,bits,0.77,5.18,7.5,0.3,11,C.yellow,{charSpacing:1.4});
- txt(s,'Teoria da Informação  •  apresentação de 20 minutos',0.77,6.35,8.5,0.3,11,C.white);
+ txt(s,'TEORIA DA INFORMAÇÃO  /  ESTUDO EMPÍRICO',0.77,6.35,8.5,0.3,9,C.white,{charSpacing:1.6,bold:true});
  note(s,'0:45 — Abra com a pergunta, não com a resposta. Diga que o projeto usa apenas texto, probabilidades e compressores; nenhum embedding ou rede neural.');
 }
 
@@ -87,6 +88,19 @@ function axis(s,x,y,w,h,xlabel='',ylabel='') { line(s,x,y+h,w,0,C.muted,1.2); li
 }
 
 // 3 — surpresa
+{
+ const s=slide('O que precisa ser verdadeiro para a hipótese sobreviver?','perguntas de pesquisa');
+ const qs=[
+  ['Q1','ESTRUTURA','Áreas relacionadas devem compartilhar padrões comprimíveis.',C.blue],
+  ['Q2','DIREÇÃO','Modelos próprios devem codificar melhor seus textos.',C.yellow],
+  ['Q3','GENERALIZAÇÃO','A estrutura deve prever resumos nunca vistos.',C.green]
+ ];
+ qs.forEach((q,i)=>{const y=1.62+i*1.45;txt(s,q[0],0.78,y,0.72,0.46,18,q[3],{fontFace:'Georgia',bold:true});line(s,1.65,y+0.25,1.0,0,q[3],2.2);txt(s,q[1],2.95,y-0.02,2.2,0.34,11,q[3],{bold:true,charSpacing:1.2});txt(s,q[2],5.05,y-0.05,6.95,0.68,18,C.white,{fontFace:'Georgia'});});
+ txt(s,'Uma árvore visualmente plausível não basta.',2.85,6.15,7.8,0.38,15,C.muted,{italic:true,align:'center'});
+ note(s,'0:55 — Apresente as três perguntas como critérios de sucesso. Destaque que a classificação fora da amostra é o teste mais forte.');
+}
+
+// 4 — surpresa
 {
  const s=slide('Informação é surpresa','shannon, 1948');
  const probs=[0.5,0.25,0.125,0.0625];
@@ -128,7 +142,15 @@ function axis(s,x,y,w,h,xlabel='',ylabel='') { line(s,x,y+h,w,0,C.muted,1.2); li
  note(s,'1:15 — Explique a separação treino/teste, o balanceamento por bytes e que cada figura nasce de um CSV. A análise foi feita sobre corpus rápido real do arXiv.');
 }
 
-// 7 — compressibilidade
+{
+ const s=slide('Uma escada de evidências, não uma única figura','validade científica');
+ const levels=[['1','SANIDADE','línguas conhecidas'],['2','DESCRIÇÃO','bpc, matrizes e mapas'],['3','EXPLICAÇÃO','palavras que carregam bits'],['4','PREDIÇÃO','artigos fora da amostra'],['5','INCERTEZA','bootstrap e estabilidade']];
+ levels.forEach((v,i)=>{const x=0.72+i*2.48,y=5.55-i*0.78;box(s,x,y,2.05,0.62,C.panel,[C.grid,C.grid,C.grid,C.grid,C.grid][i],0.02);txt(s,v[0],x+0.12,y,0.35,0.62,12,[C.blue,C.yellow,C.purple,C.green,C.red][i],{bold:true,align:'center'});txt(s,v[1],x+0.48,y+0.03,1.42,0.24,9,C.white,{bold:true,charSpacing:0.5});txt(s,v[2],x+0.48,y+0.29,1.42,0.24,8,C.muted);if(i<4)line(s,x+2.05,y+0.31,0.43,-0.78,C.grid,1.2);});
+ txt(s,'Quanto mais alto, mais difícil é explicar o resultado por acaso visual.',2.0,1.7,9.2,0.5,19,C.white,{fontFace:'Georgia',italic:true,align:'center'});
+ note(s,'0:55 — Explique que o projeto combina controle positivo, descrição, explicabilidade, predição e incerteza. Isso organiza a seção de resultados.');
+}
+
+// 8 — compressibilidade
 {
  const s=slide('Regularidade aparece como menos bits por caractere','resultado 1');
  const data=records('exp1_compressibility.csv').filter(r=>r.kind==='compressor'&&r.method==='lzma').map(r=>({a:r.area,v:+r.value})).sort((a,b)=>a.v-b.v);
@@ -229,48 +251,45 @@ function axis(s,x,y,w,h,xlabel='',ylabel='') { line(s,x,y+h,w,0,C.muted,1.2); li
 
 function buildReport() {
  const out=path.join(OUT,'relatorio_intelligence_is_compression.pdf');
- const doc=new PDFDocument({size:'A4',margins:{top:46,bottom:42,left:50,right:50},info:{Title:'Relatório — Intelligence is Compression',Author:'Projeto de Teoria da Informação'}});
+ const doc=new PDFDocument({size:'A4',bufferPages:true,margins:{top:58,bottom:58,left:58,right:58},info:{Title:'Aula completa — Intelligence is Compression',Author:'Projeto de Teoria da Informação'}});
  doc.pipe(fs.createWriteStream(out));
- const W=495;
- function header(kicker,title,subtitle=''){doc.fillColor('#58C4DD').font('Helvetica-Bold').fontSize(8).text(kicker.toUpperCase(),{characterSpacing:1.2});doc.moveDown(.65);doc.fillColor('#0B1020').font('Helvetica-Bold').fontSize(23).text(title,{width:W});if(subtitle){doc.moveDown(.35);doc.fillColor('#556078').font('Helvetica').fontSize(10.5).text(subtitle,{width:W});}doc.moveDown(.85);doc.strokeColor('#DCE3EF').lineWidth(.7).moveTo(50,doc.y).lineTo(545,doc.y).stroke();doc.moveDown(.8);}
- function h(t){doc.fillColor('#0B1020').font('Helvetica-Bold').fontSize(13).text(t);doc.moveDown(.35);}
- function p(t){doc.fillColor('#263249').font('Helvetica').fontSize(9.5).lineGap(2.2).text(t,{width:W,align:'justify'});doc.moveDown(.62);}
- function callout(t,color='#EAF8FB'){const y=doc.y;doc.roundedRect(50,y,W,48,7).fill(color);doc.fillColor('#0B1020').font('Helvetica-Bold').fontSize(10).text(t,66,y+13,{width:W-32});doc.y=y+60;}
- function footer(n){doc.fillColor('#7A869F').font('Helvetica').fontSize(7.5).text(`INTELLIGENCE IS COMPRESSION   •   ${n}/4`,50,778,{width:W,height:10,align:'right',lineBreak:false});}
+ const source=fs.readFileSync(path.join(ROOT,'docs','aula_completa.md'),'utf8');
+ const blocks=source.split(/\n\s*\n/).map(x=>x.trim()).filter(Boolean);
 
- header('1 · motivação','Intelligence is Compression','Relatório de apoio à apresentação — Teoria da Informação');
- p('A pergunta do projeto é operacional: se dois conjuntos de textos compartilham regularidades, um compressor ou modelo probabilístico ajustado em um deles deveria descrever o outro com menos bits. A hipótese conecta a intuição de “entender” a uma grandeza observável: comprimento de código. Ela não afirma que inteligência se reduz à compressão; usa compressão como instrumento para detectar estrutura e testar generalização.');
- h('Fundamentação');
- p('Shannon define a informação de um evento x como I(x) = −log₂ p(x): eventos raros custam mais bits. A entropia H(P) é a surpresa média e limita o comprimento médio de códigos eficientes. Quando codificamos dados de P com um modelo Q, pagamos a entropia cruzada H(P,Q) = H(P) + KL(P||Q). O excesso KL mede o custo da crença errada e tem direção. Um compressor prático aproxima essas ideias ao reutilizar padrões já observados.');
- callout('Ideia-guia: prever bem, comprimir bem e atribuir alta probabilidade são três faces do mesmo mecanismo.');
- h('Antecedentes');
- p('Shannon (1948) fornece a teoria; Benedetto et al. (2002) mostram que compressores permitem recuperar relações entre línguas; e o vídeo “But what is cross-entropy?”, do 3Blue1Brown, inspira a tradução visual entre probabilidade, surpresa e bits.'); footer(1);
+ doc.rect(0,0,595,842).fill('#101820');
+ doc.fillColor('#E8C56A').font('Helvetica-Bold').fontSize(9).text('TEORIA DA INFORMAÇÃO',{characterSpacing:2});
+ doc.fillColor('#F2EDE3').font('Times-Italic').fontSize(38).text('Intelligence',{continued:false});
+ doc.fillColor('#67B7C7').font('Times-Roman').fontSize(38).text('is compression');
+ doc.moveDown(1.2).fillColor('#A9B0AE').font('Helvetica').fontSize(14).text('Aula completa para compreender, apresentar e defender o projeto',{width:430});
+ doc.fillColor('#F2EDE3').font('Helvetica').fontSize(9).text('MATERIAL DE PREPARAÇÃO  /  EDIÇÃO GERADA A PARTIR DO REPOSITÓRIO',58,742,{characterSpacing:1.1});
+ doc.addPage();
 
- doc.addPage(); header('2 · método','Dos resumos ao espaço de bits');
- p('O corpus reúne resumos reais do arXiv em dez macroáreas: math, astro-ph, cond-mat, hep-th, cs, q-bio, stat, econ, physics e quant-ph. A limpeza normaliza espaços e o balanceamento usa cotas de bytes, evitando que áreas maiores dominem por volume. Há separação entre treino e teste, seed 42 e exportação dos valores para CSV antes de qualquer figura.');
- h('Experimentos');
- p('1) Compressibilidade: gzip, bz2 e LZMA produzem bits por caractere (bpc), enquanto modelos de caracteres estimam entropia condicional por ordem. 2) NCD: NCD(x,y) = [C(xy) − min(C(x),C(y))]/max(C(x),C(y)); a matriz alimenta árvore hierárquica e MDS. 3) Cross-entropy: modelos de n-gramas com suavização Witten–Bell codificam teste de uma área sob modelos de outras. 4) Explicabilidade: a KL é decomposta por palavra. 5) Validação: artigos não vistos são classificados por NCD, n-gramas e TF-IDF. 6) Robustez: bootstrap produz intervalos para acurácia e estabilidade dos agrupamentos.');
- h('Critério de leitura');
- p('Bpc menor significa maior previsibilidade textual, não maior mérito intelectual. NCD menor indica mais regularidade reutilizável pelo compressor escolhido. Cross-entropy e KL dependem da direção. Todos os resultados são condicionais ao corpus, limpeza, tamanho de amostra e modelo.');
- callout('Controle de sanidade: traduções da Declaração Universal dos Direitos Humanos recuperam qualitativamente relações entre línguas, seguindo a ideia de Benedetto et al.'); footer(2);
-
- doc.addPage(); header('3 · resultados','O que os dados realmente sustentam');
- h('Compressão e proximidade');
- p('Com LZMA, hep-th obteve o menor custo no corpus rápido (2,65 bpc) e astro-ph o maior (2,90 bpc). Esses valores refletem estilo e regularidade local. Pela NCD/LZMA, cond-mat ↔ physics foi o par mais próximo (0,859), enquanto math ↔ astro-ph foi o mais distante (0,898). As diferenças são pequenas, portanto a interpretação deve enfatizar estrutura relativa, não separações absolutas.');
- h('Cross-entropy e explicação');
- p('A diagonal da matriz de entropia cruzada representa o modelo especializado. Subtrair esse custo próprio deixa o excesso estimado por KL. Por exemplo, matemática codificada pelo modelo de astro-ph custa 3,08 bpc, contra 2,54 bpc no modelo próprio: cerca de 0,54 bpc de desperdício. A decomposição por palavras identifica termos especializados responsáveis por parte desse excesso.');
- h('Generalização');
- p('O teste mais exigente é classificar resumos nunca vistos. O modelo de n-gramas alcançou 67,1% de acurácia e F1 macro 68,3%; TF-IDF, 60,5%; NCD k=5, 38,2%; NCD k=1, 27,6%. Logo, a proposta encontra sinal real, mas o compressor de arquivo não é o melhor classificador. O n-grama usa diretamente a lógica da entropia cruzada e generaliza melhor neste conjunto.');
- callout('Conclusão empírica: “há estrutura comprimível” é sustentado; “NCD é o melhor método” não é. Essa distinção fortalece o trabalho.','#FFF6DA'); footer(3);
-
- doc.addPage(); header('4 · discussão','Limites, fala e conclusão');
- h('Limitações que devem aparecer na apresentação');
- p('Compressores práticos não são universais: gzip tem janela de 32 KB; a concatenação pode introduzir assimetria; vocabulário compartilhado pode dominar sem equivaler a proximidade conceitual; rótulos do arXiv e escolhas de limpeza introduzem viés; e os intervalos bootstrap ainda são largos. A KL estimada compara modelos suavizados finitos, não distribuições verdadeiras. O corpus versionado é uma execução rápida real e balanceada, adequada à demonstração, mas não encerra a questão.');
- h('Estratégia de apresentação (20 min)');
- p('Use os primeiros 5 minutos para construir surpresa, entropia e cross-entropy visualmente. Em seguida, apresente o pipeline e a NCD em 4 minutos. Reserve 6 minutos aos resultados — mapa, palavras e classificação — e 3 minutos a robustez e limitações. Feche em 2 minutos com a tese: comprimento de descrição é uma lente mensurável para regularidade, e uma boa representação só é convincente quando generaliza. As notas incorporadas no PPTX distribuem cerca de 19min45s.');
- h('Referências');
- p('SHANNON, C. E. A Mathematical Theory of Communication. Bell System Technical Journal, 1948.\nBENEDETTO, D.; CAGLIOTI, E.; LORETO, V. Language Trees and Zipping. Physical Review Letters, 2002.\n3BLUE1BROWN. But what is cross-entropy? Vídeo educacional.');
- callout('Mensagem final: inteligência, neste projeto, é descobrir descrições curtas que preservam estrutura suficiente para prever dados novos.','#EAFBF5'); footer(4);
+ for(const block of blocks.slice(2)) {
+  if(block.startsWith('## ')) {
+   if(doc.y>690) doc.addPage();
+   doc.moveDown(.7).fillColor('#67B7C7').font('Helvetica-Bold').fontSize(8).text('CAPÍTULO',{characterSpacing:1.8});
+   doc.moveDown(.25).fillColor('#101820').font('Times-Roman').fontSize(21).text(block.slice(3),{lineGap:1});
+   doc.moveDown(.45).strokeColor('#D8D2C7').lineWidth(.7).moveTo(58,doc.y).lineTo(537,doc.y).stroke();doc.moveDown(.65);
+  } else if(block.startsWith('# ')) {
+   continue;
+  } else {
+   const isFormula=/^(?:I\(|H\(|KL\(|NCD\()/.test(block);
+   if(isFormula) {
+    doc.moveDown(.2).fillColor('#101820').font('Times-Italic').fontSize(13.5).text(block,{align:'center',lineGap:4});doc.moveDown(.55);
+   } else {
+    doc.fillColor('#26343A').font('Helvetica').fontSize(10.2).text(block,{align:'justify',lineGap:3.2});doc.moveDown(.62);
+   }
+  }
+ }
+ const range=doc.bufferedPageRange();
+ for(let i=0;i<range.count;i++) {
+  doc.switchToPage(i);
+  if(i>0) {
+   doc.strokeColor('#D8D2C7').lineWidth(.45).moveTo(58,805).lineTo(537,805).stroke();
+   doc.fillColor('#7A8585').font('Helvetica').fontSize(7.5).text('INTELLIGENCE IS COMPRESSION',58,812,{width:250,lineBreak:false});
+   doc.text(`${i+1} / ${range.count}`,437,812,{width:100,align:'right',lineBreak:false});
+  }
+ }
  doc.end(); return out;
 }
 
