@@ -13,6 +13,8 @@ Projeto de Teoria da Informação que testa uma ideia simples: se dois conjuntos
 - análise de textos interdisciplinares e robustez por bootstrap;
 - figuras em PNG 300 dpi e SVG;
 - 13 cenas ManimGL, incluindo três visualizações 3D.
+- uma apresentação de 20 minutos em PPTX editável/importável no Canva;
+- um relatório de apoio em PDF com quatro páginas.
 
 Nenhum resultado é inventado: `results/summary.md` só é escrito depois que os CSVs correspondentes existem.
 
@@ -30,7 +32,16 @@ python -m pip install -U pip
 pip install -r requirements.txt
 ```
 
-Para as animações, instale também `ffmpeg`, Pango, uma implementação OpenGL funcional e, opcionalmente, LaTeX. As cenas usam `Text`, portanto LaTeX não é obrigatório.
+Alternativa recomendada, sem alterar o Python do sistema:
+
+```bash
+uv python install 3.12
+uv venv --python 3.12 .venv
+source .venv/bin/activate
+uv pip install -r requirements.txt
+```
+
+Para as animações, Pango e uma implementação OpenGL funcional são necessários; LaTeX é opcional. O pacote `imageio-ffmpeg` fornece um ffmpeg isolado quando não existe uma instalação do sistema.
 
 ## Dados
 
@@ -73,6 +84,17 @@ make animations-final
 ```
 
 As cenas leem exclusivamente `results/tables/`; rode o pipeline antes. Em Windows sem Bash, execute os comandos individuais listados em [`docs/animations_notes.md`](docs/animations_notes.md).
+
+## Apresentação e relatório
+
+Os entregáveis são gerados diretamente dos CSVs versionados, preservando a rastreabilidade dos números:
+
+```bash
+npm install
+make deliverables
+```
+
+Os arquivos finais aparecem em `deliverables/`. O PPTX usa formas vetoriais, textos editáveis e notas do apresentador; pode ser aberto no PowerPoint, Google Slides ou importado no Canva. O PDF foi diagramado para ocupar exatamente quatro páginas A4.
 
 Neste ambiente, as 13 classes foram importadas com sucesso no ManimGL 1.7.2. A API do arXiv bloqueou o IP, mas o fallback público do Hugging Face produziu um corpus rápido real e balanceado; os resultados versionados vêm desse corpus. Os MP4 não foram renderizados porque ffmpeg não estava instalado. Nenhum vídeo ou resultado foi simulado.
 

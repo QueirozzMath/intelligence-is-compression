@@ -1,6 +1,18 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# Usa ffmpeg do sistema quando disponível; caso contrário, encontra o binário
+# isolado fornecido por imageio-ffmpeg no ambiente Python ativo.
+if ! command -v ffmpeg >/dev/null 2>&1; then
+  ffmpeg_path="$(python -c 'import imageio_ffmpeg; print(imageio_ffmpeg.get_ffmpeg_exe())')"
+  export PATH="$(dirname "$ffmpeg_path"):$PATH"
+  if [[ "$(basename "$ffmpeg_path")" != "ffmpeg" ]]; then
+    ffmpeg_dir="$(mktemp -d "${TMPDIR:-/tmp}/iic-ffmpeg.XXXXXX")"
+    ln -s "$ffmpeg_path" "$ffmpeg_dir/ffmpeg"
+    export PATH="$ffmpeg_dir:$PATH"
+  fi
+fi
+
 quality="${1:-preview}"
 if [[ "$quality" == "preview" ]]; then
   export MANIMGL_RENDER_OPTIONS="-w -r 854x480 --fps 15"
