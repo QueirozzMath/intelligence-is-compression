@@ -2,7 +2,7 @@ name: Publish interactive presentation
 
 on:
   push:
-    branches: [main, feat/final-visual-overhaul]
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -30,8 +30,6 @@ jobs:
           cp -R results/figures _site/results/figures
           cp results/summary.md _site/results/summary.md
       - uses: actions/configure-pages@v5
-        with:
-          enablement: true
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site

@@ -91,8 +91,6 @@ As cenas leem exclusivamente `results/tables/`; rode o pipeline antes. Em Window
 
 - **[Abrir a apresentação web interativa](https://raw.githack.com/QueirozzMath/intelligence-is-compression/feat/final-visual-overhaul/web/index.html)**
 - **[Abrir diretamente o laboratório de simulações e animações](https://raw.githack.com/QueirozzMath/intelligence-is-compression/feat/final-visual-overhaul/web/simulations.html)**
-- [Apresentação via GitHub Pages](https://queirozzmath.github.io/intelligence-is-compression/web/) — disponível após a conclusão do workflow de publicação
-- [Laboratório via GitHub Pages](https://queirozzmath.github.io/intelligence-is-compression/web/simulations.html) — disponível após a conclusão do workflow de publicação
 - **[Baixar a apresentação editável em PPTX](deliverables/intelligence_is_compression_20min.pptx)**
 - **[Baixar a aula completa em PDF](deliverables/relatorio_intelligence_is_compression.pdf)**
 - **[Acessar todas as figuras, gráficos, dados e simulações](docs/visual_gallery.md)**
