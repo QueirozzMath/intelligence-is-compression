@@ -126,10 +126,23 @@ function axis(s,x,y,w,h,xlabel='',ylabel='') { line(s,x,y+h,w,0,C.muted,1.2); li
 // 5 — cross entropy
 {
  const s=slide('Cross-entropy mede o preço de acreditar no modelo errado','a ideia do 3blue1brown');
- const vals=[['H(P)','2,54',C.blue],['+ KL(P‖Q)','0,54',C.yellow],['H(P,Q)','3,08',C.white]];
- vals.forEach((v,i)=>{const x=0.8+i*4.1; box(s,x,1.9,3.55,2.15); txt(s,v[0],x+0.2,2.18,3.15,0.35,17,v[2],{bold:true,align:'center'}); txt(s,v[1],x+0.2,2.72,3.15,0.66,34,v[2],{bold:true,align:'center'}); txt(s,'bits / caractere',x+0.2,3.43,3.15,0.3,10,C.muted,{align:'center'}); if(i<2)txt(s,i===0?'+':'=',x+3.62,2.75,0.45,0.5,25,C.muted,{bold:true,align:'center'});});
- formula(s,[{text:'H(P,Q)',options:{color:C.white,bold:true}},{text:' = H(P) + ',options:{color:C.muted}},{text:'KL(P‖Q)',options:{color:C.yellow,bold:true}}],2.55,4.75,8.1,0.62,27);
- txt(s,'exemplo real: texto de matemática codificado pelo modelo de astro-ph',2.2,5.55,8.9,0.4,13,C.muted,{align:'center'});
+ const P=[.50,.25,.15,.10],Q=[.25,.25,.25,.25],labels=['a','b','c','d'];
+ txt(s,'P',0.72,1.62,0.45,0.45,24,C.blue,{fontFace:'Georgia',italic:true});
+ txt(s,'fonte real',1.18,1.68,1.45,0.26,9,C.muted,{charSpacing:1});
+ P.forEach((v,i)=>{const x=0.82+i*.58,h=v*3.15; s.addShape(ST.rect,{x,y:4.02-h,w:.38,h,fill:{color:C.blue},line:{color:C.blue}});txt(s,labels[i],x,4.12,.38,.25,10,C.muted,{align:'center'});});
+ txt(s,'Q',3.45,1.62,0.45,0.45,24,C.green,{fontFace:'Georgia',italic:true});
+ txt(s,'modelo usado',3.92,1.68,1.55,0.26,9,C.muted,{charSpacing:1});
+ Q.forEach((v,i)=>{const x=3.55+i*.58,h=v*3.15;s.addShape(ST.rect,{x,y:4.02-h,w:.38,h,fill:{color:C.green},line:{color:C.green}});txt(s,labels[i],x,4.12,.38,.25,10,C.muted,{align:'center'});});
+ line(s,6.05,2.84,.72,0,C.white,1.4);line(s,6.58,2.68,.2,.16,C.white,1.4);line(s,6.58,3.00,.2,-.16,C.white,1.4);
+ formula(s,[{text:'H(P,Q)',options:{color:C.white,bold:true}},{text:' = H(P) + ',options:{color:C.muted}},{text:'KL(P‖Q)',options:{color:C.yellow,bold:true}}],7.05,1.55,5.55,.52,21);
+ const bits=['0','1','0','0','1','1','0','1','1','0','1'];
+ bits.forEach((b,i)=>{const x=7.1+i*.46;s.addShape(ST.rect,{x,y:2.5,w:.46,h:.66,fill:{color:C.bg,transparency:100},line:{color:C.grid,width:.7}});txt(s,b,x,2.5,.46,.66,16,i>7?C.yellow:C.green,{bold:true,align:'center'});});
+ line(s,7.15,3.48,3.56,0,C.green,3);line(s,10.82,3.48,1.28,0,C.yellow,3);
+ txt(s,'bits inevitáveis',7.12,3.66,3.62,.3,11,C.green,{align:'center'});txt(s,'custo extra',10.77,3.66,1.42,.3,11,C.yellow,{align:'center'});
+ txt(s,'2,54',7.35,4.48,1.3,.55,28,C.green,{fontFace:'Georgia',align:'center'});txt(s,'+',8.75,4.54,.35,.4,18,C.muted,{align:'center'});txt(s,'0,54',9.15,4.48,1.3,.55,28,C.yellow,{fontFace:'Georgia',align:'center'});txt(s,'=',10.55,4.54,.35,.4,18,C.muted,{align:'center'});txt(s,'3,08',10.98,4.48,1.3,.55,28,C.white,{fontFace:'Georgia',align:'center'});
+ txt(s,'H(P)',7.35,5.07,1.3,.25,10,C.muted,{align:'center'});txt(s,'KL(P‖Q)',9.12,5.07,1.36,.25,10,C.muted,{align:'center'});txt(s,'bits / caractere',10.9,5.07,1.48,.25,10,C.muted,{align:'center'});
+ txt(s,'Quando Q erra a forma de P, a mensagem fica mais longa.',1.05,5.42,11.15,.42,18,C.white,{fontFace:'Georgia',italic:true,align:'center'});
+ txt(s,'exemplo real: texto de matemática codificado pelo modelo de astro-ph',2.2,6.05,8.9,.3,10,C.muted,{align:'center'});
  note(s,'1:20 — P é a fonte real; Q é nossa crença. A entropia cruzada é o número de bits que de fato pagamos. A diferença para o custo próprio é a divergência KL.');
 }
 

@@ -36,6 +36,11 @@ Todos os artefatos abaixo são derivados dos dados em `results/tables/`. As vers
 - [Superfície 3D](../web/simulations.html#surface)
 - [Notas técnicas das animações](animations_notes.md)
 
+## Estudos de direção visual
+
+- [Sistema visual dos slides — conceito de entropia cruzada](../web/assets/concepts/slide-system-v2.png)
+- [Superfície 3D — conceito de referência](../web/assets/concepts/surface-3d-v2.png)
+
 ## Dados editáveis
 
 - [Todos os CSVs e JSONs usados nas visualizações](../results/tables/)
