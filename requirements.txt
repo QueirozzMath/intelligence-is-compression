@@ -1,0 +1,14 @@
+numpy>=1.26
+setuptools<81  # ManimGL 1.7.2 ainda importa pkg_resources
+pandas>=2.1
+scipy>=1.11
+matplotlib>=3.8
+PyYAML>=6.0
+scikit-learn>=1.4
+nltk>=3.8
+requests>=2.31
+pytest>=8.0
+tabulate>=0.9
+manimgl>=1.7
+audioop-lts; python_version >= "3.13"  # compatibilidade do pydub/ManimGL
+

@@ -1,0 +1,22 @@
+directories:
+  base: "."
+  subdirs:
+    output: "results/animations"
+    raster_images: "assets/raster"
+    vector_images: "assets/vector"
+    sounds: "assets/sounds"
+    data: "results/tables"
+    downloads: ".cache/manim-downloads"
+  cache: ".cache/manim"
+  temporary_storage: ".cache/manim-tmp"
+camera:
+  resolution: "(1920, 1080)"
+  background_color: "#111318"
+  fps: 60
+file_writer:
+  ffmpeg_bin: "ffmpeg"
+  video_codec: "libx264"
+  pixel_format: "yuv420p"
+text:
+  font: "Arial"
+

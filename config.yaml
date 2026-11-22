@@ -1,0 +1,21 @@
+seed: 42
+areas: [math, astro-ph, cond-mat, hep-th, cs, q-bio, stat, econ, physics, quant-ph]
+train_bytes_per_area: 1000000
+test_bytes_per_area: 200000
+min_abstract_chars: 300
+ngram_orders: [1, 2, 3, 4, 5, 6]
+compressors: [gzip, bz2, lzma]
+ncd_sample_bytes: 1000000
+exp3_sizes: [10240, 32768, 102400, 327680, 1000000]
+exp6_test_per_area: 100
+exp6_reference_per_area: 100
+bootstrap_samples: 100
+quick:
+  train_bytes_per_area: 50000
+  test_bytes_per_area: 15000
+  ncd_sample_bytes: 30000
+  exp3_sizes: [4096, 16384, 32768]
+  exp6_test_per_area: 8
+  exp6_reference_per_area: 8
+  bootstrap_samples: 10
+
