@@ -25,11 +25,15 @@ Todos os artefatos abaixo são derivados dos dados em `results/tables/`. As vers
 
 ## Simulações e animações
 
-- [Código das 13 cenas Manim](../animations/)
-- [Conceitos: previsão, cross-entropy, NCD e janela gzip](../animations/scenes_basics.py)
-- [Resultados 2D: heatmap, dendrograma, palavras e classificação](../animations/scenes_data.py)
-- [Visualizações 3D: mapa, nuvem de artigos e superfície de cross-entropy](../animations/scenes_3d.py)
-- [Vídeos renderizados](../results/animations/)
+- [Abrir o laboratório visual](../web/simulations.html)
+- [Surpresa em bits](../web/simulations.html#surprise)
+- [Construtor de códigos](../web/simulations.html#codes)
+- [Cross-entropy](../web/simulations.html#cross-entropy)
+- [NCD entre textos](../web/simulations.html#ncd)
+- [Janela do gzip](../web/simulations.html#gzip-window)
+- [Mapa das áreas](../web/simulations.html#areas)
+- [Classificação](../web/simulations.html#classification)
+- [Superfície 3D](../web/simulations.html#surface)
 - [Notas técnicas das animações](animations_notes.md)
 
 ## Dados editáveis

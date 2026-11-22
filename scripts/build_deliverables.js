@@ -11,9 +11,9 @@ const OUT = path.join(ROOT, 'deliverables');
 fs.mkdirSync(OUT, { recursive: true });
 
 const C = {
-  bg: '101820', panel: '16232C', grid: '31414A', white: 'F2EDE3',
-  muted: 'A9B0AE', blue: '67B7C7', yellow: 'E8C56A', red: 'D97564',
-  green: '72B69A', purple: 'A995C8', orange: 'D99559',
+  bg: '021D2B', panel: '052838', grid: '6A8A94', white: 'EEF4F2',
+  muted: '9DB0B4', blue: '6EDBE0', yellow: 'F5B73B', red: 'EF7D6B',
+  green: '86DF8B', purple: 'B7A8D9', orange: 'E59A54',
 };
 const AREA = { math:'58C4DD', 'astro-ph':'F6C85F', 'cond-mat':'6EE7B7',
   'hep-th':'D58BF0', cs:'71A7FF', 'q-bio':'FF8A65', stat:'FDE68A', econ:'C49A6C',

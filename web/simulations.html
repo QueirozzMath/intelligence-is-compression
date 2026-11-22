@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Laboratório interativo de Teoria da Informação.">
+  <title>Laboratório de informação</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="lab-body">
+  <a class="skip-link" href="#experiment">Ir para a experiência</a>
+  <header class="lab-header">
+    <a class="wordmark" href="index.html">Intelligence is Compression</a>
+    <span>Laboratório de informação</span>
+    <a href="index.html">Voltar à apresentação</a>
+  </header>
+  <main class="lab-shell">
+    <aside class="lab-copy">
+      <p id="lab-index"></p>
+      <h1 id="lab-title"></h1>
+      <p id="lab-description"></p>
+      <div id="lab-equation" class="equation"></div>
+      <h2>O que explorar</h2>
+      <ul id="lab-prompts"></ul>
+      <p class="keyboard-help"><kbd>←</kbd><kbd>→</kbd> trocar experiência · <kbd>R</kbd> reiniciar</p>
+    </aside>
+    <section id="experiment" class="experiment" tabindex="-1" aria-label="Simulação interativa">
+      <div id="experiment-stage"></div>
+      <div class="experiment-controls" id="experiment-controls"></div>
+    </section>
+  </main>
+  <nav id="experience-rail" class="experience-rail" aria-label="Experiências"></nav>
+  <script src="simulations.js"></script>
+</body>
+</html>
