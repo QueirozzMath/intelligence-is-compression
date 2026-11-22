@@ -1,6 +1,6 @@
 PYTHON ?= python
 
-.PHONY: data experiments figures all quick test animations animations-final deliverables
+.PHONY: data experiments figures all quick test animations animations-final deliverables web
 data:
 	$(PYTHON) -m src.cli data
 experiments:
@@ -19,4 +19,6 @@ animations-final:
 	bash animations/render_all.sh final
 deliverables:
 	node scripts/build_deliverables.js
+web:
+	$(PYTHON) -m http.server 8000
 

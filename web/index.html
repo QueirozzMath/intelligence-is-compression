@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Apresentação interativa sobre compressão e Teoria da Informação.">
+  <title>Intelligence is Compression — apresentação interativa</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="deck-body">
+  <a class="skip-link" href="#slide-stage">Ir para o slide</a>
+  <header class="deck-header">
+    <a class="wordmark" href="#1">Intelligence is Compression</a>
+    <nav aria-label="Recursos">
+      <a href="simulations.html">Laboratório</a>
+      <a href="../deliverables/relatorio_intelligence_is_compression.pdf">Aula completa</a>
+    </nav>
+  </header>
+  <main id="slide-stage" class="slide-stage" tabindex="-1" aria-live="polite"></main>
+  <footer class="deck-controls">
+    <div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
+    <button id="prev" type="button" aria-label="Slide anterior">←</button>
+    <output id="counter" aria-label="Slide atual"></output>
+    <button id="next" type="button" aria-label="Próximo slide">→</button>
+    <button id="fullscreen" type="button">Tela cheia</button>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
